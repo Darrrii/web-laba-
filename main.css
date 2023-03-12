@@ -11,13 +11,20 @@ header {
     padding: 10px;
     font-size: 16pt;
 }
-
+header:hover {
+    color: blueviolet;
+    font-size: 50px;
+}
 footer {
     background-image: linear-gradient( to right bottom,red,orange,yellow, green,blue,darkblue,purple);
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
     text-align: right;
+}
+footer:hover {
+    color: blueviolet;
+    font-size: 25px;
 }
 a {
     text-shadow: 5px 5px 3px black;
