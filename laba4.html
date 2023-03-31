@@ -7,12 +7,44 @@
     <title>Пушкарева Дарья, Андронова Софья. Лабораторная 4</title>
     <link rel="stylesheet" href="main.css">
     <style>
-
+        main div {
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 7px;
+            padding: 7px;
+            width: 500px;
+            height: 120px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            background: linear-gradient(#ccf, #ddf);
+            z-index: 1;
+        }
+        .second {
+            z-index: -1;
+            left: 380px;
+            top: 120px;
+            position: fixed;
+        }
         .second:hover {
             z-index: 1;
             left: 380px;
             top: 120px;
             position: fixed;  
+        }
+        aside {
+            left: 0;
+            width: 300px;
+            background: black;
+        }
+        aside div {
+            color: white;
+            padding: 10px;
+            text-align: justify;
+            text-indent: 20px;
+        }
+        main {
+            margin-left: 320px;
         }
         div {
             margin: 20px;
@@ -36,14 +68,24 @@
         НГТУ, ФБ, Лабораторная работа 4
     </header>
     
-    <main>
+    <aside style=" 
+        left: 0;
+        width: 300px;
+        background: grey;
+    ">
+
+        <div>Об этой книге</div>
+
         <div>
-            Инженеры представляют мир как конструкцию, и я, гуманитарий[1], примерно так же. 
-            В этом и заключается секрет осознания экономики как науки. Всё становится гораздо 
-            яснее, если представить, что финансы в глобальном смысле – это в первую очередь 
-            технология. Так думать удобно и просто. Ведь технология – всего лишь метод действия 
-            или способ производства чего-либо.
+             Инженеры представляют мир как конструкцию, и я, гуманитарий[1], примерно так же. 
+             В этом и заключается секрет осознания экономики как науки. Всё становится гораздо 
+             яснее, если представить, что финансы в глобальном смысле – это в первую очередь 
+             технология. Так думать удобно и просто. Ведь технология – всего лишь метод действия 
+             или способ производства чего-либо.
         </div>
+    </aside>
+
+    <main>
 
         <div class="second">
             Конечно, тут много деталей, но для базового понимания финансовый инструмент удобно 
