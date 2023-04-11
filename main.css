@@ -11,6 +11,10 @@ header {
     padding: 10px;
     font-size: 16pt;
 }
+main {
+    margin: 10px 20px;
+}
+
 header:hover {
     color: blueviolet;
     font-size: 50px;
