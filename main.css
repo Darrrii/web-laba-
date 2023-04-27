@@ -70,3 +70,12 @@ a:active {
     padding: 5px;
     text-align: left;
 }
+.color {
+    background-color: yellow;
+    border-color: red;
+    border: 20px solid;
+    border-width: 1px;
+    text-align: center;
+    margin: 10px 40px 10px 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
