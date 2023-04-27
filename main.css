@@ -53,3 +53,20 @@ a:active {
     transition: 1s;
 }
 
+.game {
+    border: 20px solid;
+    border-radius: 10px;
+    border-width: 1px;
+    margin: 10px auto;
+    padding: 5px;
+    text-align: center;
+}
+.pravila {
+    background-color: cornsilk;
+    border: 20px solid;
+    border-radius: 10px;
+    border-width: 1px;
+    margin: 10px auto;
+    padding: 5px;
+    text-align: left;
+}
