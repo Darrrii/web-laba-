@@ -85,6 +85,29 @@
             document.getElementById('color-name').innerHTML='желтый';
         }
         }
+
+        let positionLeft = true;
+        function changeClick(div) {
+            div.style.left = null;
+            div.style.right = null;
+            div.style.position = 'absolute';
+            if (positionLeft == true) {
+                div.style.transition = '2s';
+                div.style.right = '20px';
+                div.style.transformation = 'rotate(0)';
+                positionLeft = false;
+                div.style.backgroundColor = 'black';
+                div.style.color = 'pink';
+            }
+            else {
+                div.style.transition = '2s';
+                div.style.left = '20px';
+                div.style.transformation = 'rotate(4turn)';
+                positionLeft = true;
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'black';
+            }
+        }
     </script>
 </head>
 
@@ -143,6 +166,10 @@
         <div class="color" ondblclick="changeColor(this)">
         Цвет <span id="color-name">желтый</span><br>
         Сделайте двойной щелчок, чтобы сменить<div class=""></div>
+        </div>
+
+        <div class="click" onclick="changeClick(this)">
+            Щёлкни меня
         </div>
     </main>
 

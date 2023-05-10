@@ -25,6 +25,8 @@ footer {
     padding: 10px;
     font-size: 16pt;
     text-align: right;
+    position: fixed;
+    bottom: 0;
 }
 footer:hover {
     color: blueviolet;
@@ -78,4 +80,14 @@ a:active {
     text-align: center;
     margin: 10px 40px 10px 40px;
     font-family: 'Courier New', Courier, monospace;
+}
+.click {
+    border: 3px solid black;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    background-color: pink;
+    color: black;
+    cursor: pointer;
+    position: absolute;
 }
