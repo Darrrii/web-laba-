@@ -91,3 +91,16 @@ a:active {
     cursor: pointer;
     position: absolute;
 }
+.expanding {
+    border: 3px solid black;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    margin: 20px;
+    hyphens: auto;
+    top: 305px;
+}
