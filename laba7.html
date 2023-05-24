@@ -49,6 +49,19 @@
                 table.appendChild(tr);
             }
         }
+
+        function Calcul() {
+            let numberr= 46;
+            let table= document.getElementById('numberr');
+
+            for( let i=13; i<=33; i++) {
+                let tr= document.createElement('tr');
+                let td= document.createElement('td');
+                td.innerHTML= numberr+'*'+i+'='+(numberr*i);
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+        }
     </script>
 </head>
 <body>
@@ -65,6 +78,9 @@
 
         <button onclick="Calculate()">Таблица умножения на 80</button>
         <table border="1" id="number"></table>
+
+        <button onclick="Calcul()">Таблица умножения на 46</button>
+        <table border="1" id="numberr"></table>
     </main>
 
     <footer>
