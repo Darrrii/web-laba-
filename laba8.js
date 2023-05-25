@@ -13,3 +13,13 @@ function showDate() {
     let out5=document.getElementById('current-greek');
     out5.innerHTML='Дата и время для греческой локали: '+today.toLocaleString('el');
 }
+
+function showDaysCount() {
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let count = document.getElementById('count-days');
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    count.innerHTML = 'Количество дней с даты рождения: ' + daysCount;
+}
