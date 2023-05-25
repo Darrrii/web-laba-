@@ -7,10 +7,22 @@
     <title>Пушкарёва Дарья, Андронова Софья. Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">
     <script src="laba8.js"></script>
+
+    <script>
+        function showDaysCount() {
+            let today = new Date();
+            let inputDate = document.querySelector('input[type=date]');
+            let birthday = new Date(inputDate.value);
+            let count = document.getElementById('count-days');
+            let daysCount = (today - birthday)/1000/60/60/24;
+            daysCount = Math.floor(daysCount);
+            count.innerHTML = 'Количество дней с даты рождения: ' + daysCount;
+        }
+    </script>
 </head>
 <body onload="showDate()">
     <header>
-        НГТУ, ФБ, Лабораторная работа 6
+        НГТУ, ФБ, Лабораторная работа 8
     </header>
     
     <main style="color: rgb(94, 10, 173); font-family: 'Courier New', Courier, monospace; margin: 30px; padding: 10px;">
@@ -20,6 +32,15 @@
         <div id="current-china"></div>
         <div id="current-korea"></div>
         <div id="current-greek"></div>
+        <div id="current-date"></div>
+
+        <div>
+            <tabel>Дата рождения: <input type="date"></tabel>
+        </div>
+        <div>
+            <button onclick="showDaysCount()">Показать число дней</button>
+        </div>
+        <div id="count-days"></div>
     </main>
 
     <footer>
