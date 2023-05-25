@@ -37,6 +37,18 @@
             document.getElementById('detail').innerHTML= 'Среднее значение:' + average;
         }
 
+        function addTransparentBlocks() {
+            let transBlocks = document.getElementById('transparent-blocks');
+            
+            for (let i=0; i<10; i++) {
+                let transBlock = document.createElement('div');
+                transBlock.style.opacity = (i*10) + '%';
+                transBlock.innerHTML = 'Блок №' + (i+1);
+
+                transBlocks.appendChild(transBlock);
+            }
+        }
+        
         function Calculate() {
             let number= 80;
             let table= document.getElementById('number');
@@ -118,6 +130,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button  onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
+        <div id="transparent-blocks"></div>
 
         <button onclick="Calculate()">Таблица умножения на 80</button>
         <table border="1" id="number"></table>
