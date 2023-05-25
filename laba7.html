@@ -62,6 +62,49 @@
                 table.appendChild(tr);
             }
         }
+
+        function stockPrice() {
+            let date = ['22.05.2023', '19.05.2023', '18.05.2023', '17.05.2023', '16.05.2023',
+                        '15.05.2023', '12.05.2023', '11.05.2023', '10.05.2023'];
+            let price = [0.8204, 0.8260, 0.8375, 0.8357, 0.8296, 0.8113, 0.8003, 0.8129, 0.8074];
+            let diff = [ '-', (price[0]-price[1]).toFixed(4), (price[1]-price[2]).toFixed(4), (price[2]-price[3]).toFixed(4), (price[3]-price[4]).toFixed(4), (price[4]-price[5]).toFixed(4), (price[5]-price[6]).toFixed(4), (price[6]-price[7]).toFixed(4), (price[7]-price[8]).toFixed(4), (price[8]-price[9]).toFixed(4)];
+            let table = document.getElementById('stock-price');
+            
+            for (let i = 0; i < date.length; i++) {
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
+                let td3 = document.createElement('td');
+                td1.innerHTML = date[i];
+                td2.innerHTML = price[i];
+                td3.innerHTML = diff[i];
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                table.appendChild(tr);     
+            }
+
+            let sum=0;
+            for (let i = 0; i < price.length; i++) {
+                sum = sum + price[i];
+            }
+            let average = sum / price.length;
+            document.getElementById('average-price').innerHTML = 'Среднее значение: ' + average;
+
+            let max = 0;
+            let min = price[0];
+            for (let i = 0; i < price.length; i++) {
+                if (max<price[i]) {
+                    max = price[i];
+                }
+                else if (min>price[i]) {
+                    min = price[i];
+                    }
+            }
+            document.getElementById('min').innerHTML = 'Минимальное значение: ' + min;
+            document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+        }
+            
     </script>
 </head>
 <body>
@@ -81,6 +124,12 @@
 
         <button onclick="Calcul()">Таблица умножения на 46</button>
         <table border="1" id="numberr"></table>
+
+        <button onclick="stockPrice()">Курс акций Центральный телеграф</button>
+        <table border="1" id="stock-price"></table>
+        <div id="average-price"></div>
+        <div id="min"></div>
+        <div id="max"></div>
     </main>
 
     <footer>
