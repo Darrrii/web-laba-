@@ -8,21 +8,11 @@
     <link rel="stylesheet" href="main.css">
     <script src="laba8.js"></script>
 
-    <script>
-        function showDaysCount() {
-            let today = new Date();
-            let inputDate = document.querySelector('input[type=date]');
-            let birthday = new Date(inputDate.value);
-            let count = document.getElementById('count-days');
-            let daysCount = (today - birthday)/1000/60/60/24;
-            daysCount = Math.floor(daysCount);
-            count.innerHTML = 'Количество дней с даты рождения: ' + daysCount;
-        }
-    </script>
 </head>
 <body onload="showDate()">
     <header>
         НГТУ, ФБ, Лабораторная работа 8
+        <div id="time">00:00:00</div>
     </header>
     
     <main style="color: rgb(94, 10, 173); font-family: 'Courier New', Courier, monospace; margin: 30px; padding: 10px;">
